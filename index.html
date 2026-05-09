@@ -42,7 +42,7 @@
 
   --font-display:'Fraunces', 'Noto Serif SC', serif;
   --font-body:'DM Sans', 'Noto Sans SC', sans-serif;
-  --font-hand:'Caveat', 'Noto Serif SC', cursive;
+  --font-hand:'Caveat', 'STXingKai', cursive;
 }
 
 *{margin:0;padding:0;box-sizing:border-box}
@@ -4244,7 +4244,7 @@ const zhWJ = {
     problemTitle:'关键功能已经存在，但用户很难完成核心灾害准备任务。',
     quotes:[['“我不知道自己是不是已经完成了。”','可用性测试参与者'],['“我会以为灾害风险应该在首页或警报 里面。”','首次使用者']],
     why:[['对用户','更确信计划和安全确认已经完成。'],['对 Perci','提升用户对高压场景产品的信任。'],['风险','缺少反馈会让用户在最需要可靠性的时候放弃使用。']],
-    statement:'How might we make disaster preparedness feel guided, visible, and reliable so users can move from intention to action?',
+    statement:'我们如何才能让灾难准备工作感觉有指导性、可见性和可靠性，从而使用户能够从意图转化为行动？',
     themes:[['完成感不清晰','用户需要进度提示、保存确认和明确的下一步，才能知道自己是否已经完成。'],['关键风险信息不够可见','灾害风险 不应该被埋在 设置 中，而应出现在用户自然会寻找的首页或警报。'],['系统反馈影响信任','加载状态、错误提示、发送确认和恢复路径都是建立信任的关键时刻。'],['表单需要更宽容','部分保存、可选字段和更清晰的输入要求，可以降低高压任务中的失败感。']],
     methods:[['用户访谈','我们进行了 6 次半结构化访谈，了解用户的灾害准备行为、信任来源和情感顾虑。研究发现，用户知道准备很重要，但常常停留在“想做”而不是“完成”。'],['问卷研究','我们结合 22 位参与者的前期问卷数据，并设计了新的 问卷平台问卷，围绕个人准备行为、组织影响和风险感知展开。结果显示，准备行为受到动机、侥幸心理和行动摩擦共同影响。'],['比较评估','我们比较了 FEMA、Citizen 和 Life360，分析竞品在警报速度、官方数据、位置支持和紧急沟通上的处理方式。结果显示，Perci 的深度有优势，但关键路径需要更快、更可见。'],['交互地图','我们梳理了 引导流程、计划创建、灾害风险 和状态消息等关键路径。这个过程帮助我们发现隐藏入口、断掉的路径和缺少反馈的节点。'],['启发式评估','我们使用 Nielsen 十项可用性原则和 0–4 严重程度量表，优先识别系统状态可见性、错误预防、灵活性和恢复机制的问题。']],
     testing:[['🍃','用户需要知道自己是否完成','参与者经常不知道 引导流程或设置流程是否已经结束。'],['🧭','关键功能必须更容易找到','用户期待灾害风险出现在首页或警报，而不是 设置。'],['⚠️','可靠性来自清晰反馈','禁用按钮和加载循环会让用户怀疑应用是否正常工作。'],['💚','术语会影响信任','家庭成员 和信任联系人这类词需要更清楚地解释。']],
@@ -4254,22 +4254,22 @@ const zhWJ = {
   },
   '2': {
     product:'环境交互手机底座', headline:'通过一个清晰的实体动作，帮助用户打断刷手机循环', sub:'一个行为设计项目，将停止刷手机转化为横跨睡眠、工作和日常专注场景的温和支持系统。',
-    background:['项目开始时，我们的主题还比较宽，是学生在家中的自我照护。通过形成性研究，我们把范围逐渐收窄到一个常见行为问题：很多学生想停止刷手机，但在疲惫、压力大或逃避任务时，被动刷手机会成为最容易的默认选择。','核心设计挑战并不是用户不知道问题存在。大多数学生都知道刷手机会影响睡眠、专注或日常节奏，但他们需要一种低负担、不会尴尬、也不会过度控制的方式，在当下打断这个循环。因此 PausePad 不再只针对夜间 doomscrolling，而是把 scrolling 理解为一种会出现在睡前、工作休息和低能量转换时刻的重复行为。'],
-    productBody:'PausePad 是一个环境交互手机底座，配合移动端 应用 使用。它不只是屏蔽应用，而是通过灯光、声音、手机放置动作和不同模式，让停止刷手机变成更具体的行为。用户可以设置 Sleep Mode、启动 Work Mode、调整音频、设置闹钟，并查看手机放置时长和拿起次数等数据。',
-    focus:[['面向逐渐退出','Sleep Mode','提前设定睡眠时间，通过逐步增强的环境提示（灯光与声音），引导用户从持续使用手机过渡到放下手机的状态。系统强调“逐渐退出”而不是一次性中断，让停止刷手机的过程更自然。'],['面向专注节奏','Work Mode','围绕专注与节奏管理，允许用户设定可使用时间与休息间隔。系统通过环境反馈在关键节点进行提醒与干预，帮助用户在使用与克制之间建立更清晰的边界，而不是完全禁止使用。'],['面向个人控制','应用 设置与数据','移动端主要承担控制与反馈角色，包括模式设定、时间与音频调整，以及使用数据记录。整体设计强调支持用户理解自己的行为，而不是单纯限制或惩罚。']],
+    background:['项目开始时，我们的主题还比较宽，是学生在家中的自我照护。通过形成性研究，我们把范围逐渐收窄到一个常见行为问题：很多学生想停止刷手机，但在疲惫、压力大或逃避任务时，被动刷手机会成为最容易的默认选择。','核心设计挑战并不是用户不知道问题存在。大多数学生都知道刷手机会影响睡眠、专注或日常节奏，但他们需要一种低负担、不会尴尬、也不会过度控制的方式，在当下打断这个循环。因此 PausePad 不再只针对夜间在卧室的刷手机行为，而是把刷手机理解为一种会出现在睡前、工作休息和低能量转换时刻的重复行为。'],
+    productBody:'PausePad 是一个环境交互手机底座，配合移动端 应用 使用。它不只是屏蔽应用，而是通过灯光、声音、手机放置动作和不同模式，让停止刷手机变成更具体的行为。用户可以设置睡眠模式、启动工作模式、调整音频、设置闹钟，并查看手机放置时长和拿起次数等数据。',
+    focus:[['面向逐渐退出','睡眠模式','提前设定睡眠时间，通过逐步增强的环境提示（灯光与声音），引导用户从持续使用手机过渡到放下手机的状态。系统强调“逐渐退出”而不是一次性中断，让停止刷手机的过程更自然。'],['面向专注节奏','工作模式','围绕专注与节奏管理，允许用户设定可使用时间与休息间隔。系统通过环境反馈在关键节点进行提醒与干预，帮助用户在使用与克制之间建立更清晰的边界，而不是完全禁止使用。'],['面向个人控制','应用设置与数据','移动端主要承担控制与反馈角色，包括模式设定、时间与音频调整，以及使用数据记录。整体设计强调支持用户理解自己的行为，而不是单纯限制或惩罚。']],
     meta:{role:'产品设计师 · UX 研究员 · 原型制作',crew:'5 人课程项目小组',timeline:'2026',platform:'实体原型 + 移动端应用'},
     users:'主要用户是会在睡前、学习或工作中陷入刷手机循环的学生。他们需要足够明显的支持来打断行为，但又不希望系统过度强硬、尴尬或难以坚持。',
     persona:['Lena，总是在线的学生','Lena 是 21 岁的学生，需要在课程、兼职、小组项目和不稳定的休息之间切换。手机帮她安排生活，也给她提供压力之后最容易获得的放松。','她的问题并不是单纯不自律，而是疲惫、习惯和低门槛让刷手机变成默认选择。她希望能意识到短暂休息什么时候变成逃避，也希望重新拿回时间感，而不是被惩罚或被监视。'],
     journey:[['场景','学习压力和不规律作息，让手机成为默认的缓冲方式。'],['行为','短暂查看经常延长成被动刷手机，尤其是在疲惫时。'],['担忧','严格屏蔽显得惩罚感太强，温和提醒又容易被忽略。'],['目标','和手机建立更平静的边界，同时不让流程变得沉重。']],
     problemTitle:'用户知道自己应该停止刷手机，但低能量时刻和薄弱例程让真正执行变得困难。',
-    quotes:[['“The problem is not awareness. It is follow-through.”','设计框架'],['“灯光提示需要告诉我下一步要做什么。”','用户情境演绎洞察']],
+    quotes:[['“问题不在于意识，而在于后续行动。”','设计框架'],['“灯光提示需要告诉我下一步要做什么。”','用户情境演绎洞察']],
     why:[['对用户','在意志力较低时支持休息和专注。'],['对行为设计','把干预从手机屏幕中移出来，并连接到一个具体动作。'],['风险','如果系统太吵、太控制或太尴尬，用户可能会忽略或关闭它。']],
-    statement:'How might we gently interrupt scrolling and help users take one small, manageable action toward rest or focus?',
+    statement:'我们如何才能巧妙地打断用户的刷手机行为，帮助用户采取一个易于操作的小步骤来休息或集中注意力？',
     themes:[['低负担支持','干预必须在用户注意力和动力都很低时仍然可用。'],['行动优先于意识','提示应该指向一个具体下一步：把手机放下。'],['逐步增强','系统应该先保持轻柔，只有当用户继续刷手机时才变得更明显。'],['用户控制','模式、音频、休息时间和闹钟都应该可调，让支持不变成惩罚。']],
     methods:[['用户问卷','我们先使用较宽的问卷了解自我照护和例程中断。问卷帮助我们发现“意图”和“执行”之间的落差，尤其是休息和工作转换中与手机使用有关的问题。'],['日记研究计划','我们计划了为期 7 天的日记研究，用来观察用户真正想停下刷手机、跳过例程，或希望得到支持的真实时刻。'],['概念速配矩阵','我们用 18 个概念比较不同控制方式、干预类型和干预时机，包括环境物件、触觉动作和空间提示如何支持停止刷手机。'],['用户情境演绎','我们模拟了陷入刷手机循环、准备睡觉和试图专注工作的场景，测试提示是否清晰、可接受，并能推动具体行动。']],
     testing:[['🍃','意识本身不能形成行动','参与者会注意到提示，但真正停止需要一个明确下一步。'],['🧸','额外物件负担太高','当用户已经疲惫或沉浸在刷手机中，独立工具很容易被忽略。'],['📱','手机放置让动作更清楚','把手机放到底座上更容易和充电、休息、工作例程连接起来。'],['🔕','声音需要可控','参与者更能接受逐步增强、可选且可调整的声音。']],
     pain:['意识本身太弱。用户知道自己应该停止刷手机，但疲惫时并不会自然行动。','纯环境提示容易被看见，但如果没有明确下一步，也很容易被忽略。','只在手机里的控制发生在同一个诱发刷手机的设备上，因此更容易被关闭或跳过。','过强提醒虽然可能有效，但容易显得烦人、控制感强，或在共享空间中造成尴尬。'],
-    highlights:[['Sleep Mode','用户在手机上提前设定睡觉时间。到时间后设备闪灯并发出声音提醒；手机放到底座后开始播放轻音乐。若用户在睡眠窗口中途拿起手机，灯光和声音会逐渐增强并提醒回到休息。早上到时间响闹钟，应用 记录手机放置时长。'],['Work Mode','用户在手机上启动 Work Mode，提前设定休息间隔和一次可使用手机的时间限制。放下手机后设备播放白噪音；到休息时间提醒休息或跳过；若超过限制继续使用，设备会变亮、闪光并发出声音。工作结束后记录拿起次数并发出庆祝反馈。'],['移动端 App','手机软件包括数据统计、闹钟设定、音频调整、睡眠时间设置、工作模式、休息限制和反馈记录。']],
+    highlights:[['睡眠模式','用户在手机上提前设定睡觉时间。到时间后设备闪灯并发出声音提醒；手机放到底座后开始播放轻音乐。若用户在睡眠窗口中途拿起手机，灯光和声音会逐渐增强并提醒回到休息。早上到时间响闹钟，应用 记录手机放置时长。'],['工作模式','用户在手机上启动工作模式，提前设定休息间隔和一次可使用手机的时间限制。放下手机后设备播放白噪音；到休息时间提醒休息或跳过；若超过限制继续使用，设备会变亮、闪光并发出声音。工作结束后记录拿起次数并发出庆祝反馈。'],['移动端 App','手机软件包括数据统计、闹钟设定、音频调整、睡眠时间设置、工作模式、休息限制和反馈记录。']],
     reflection:'PausePad 让我们理解，行为设计不只是提醒用户他们已经知道的事情。更重要的设计动作，是改变刷手机当下的行动结构。通过把手机放置、环境提示和用户控制结合起来，系统让停止刷手机变得更容易、更具体，也更适合睡眠和工作等不同场景。'
   },
   '3': {
@@ -4284,12 +4284,12 @@ const zhWJ = {
     problemTitle:'食物过敏决策风险很高，但菜单和沟通系统经常让风险难以判断。',
     quotes:[['“我不想每次都重新解释一遍。”','用户需求'],['“我需要很快知道什么是安全的。”','决策时刻']],
     why:[['对食客','降低焦虑，让点餐决定更快。'],['对餐厅','更清楚的过敏沟通可以减少误解。'],['风险','模糊的菜单信息可能造成严重安全问题。']],
-    statement:'How might we help people with food allergies quickly identify safer options and communicate their needs with confidence?',
+    statement:'我们如何帮助食物过敏人群在外食时更快判断安全选项，并更清楚地表达自己的过敏需求？',
     themes:[['个性化筛选','安全信号应该基于每个用户自己的过敏原，而不是泛泛的标签。'],['可见的风险标签','用户做决定前就需要看到过敏风险，而不是进入深层页面后才发现。'],['沟通支持','过敏卡 可以减少重复解释和误解。'],['决策记忆','收藏地点和偏好能让重复外食决策变得更轻松。']],
     methods:[['用户访谈','我们访谈了用户的过敏外食经历，尤其关注点餐时的紧张与沟通压力。研究发现，用户不只需要更安全的信息，也需要更快表达需求的方式。'],['亲和图分析','我们把访谈发现归纳为菜单不清晰、重复解释和点餐压力等主题。这帮助我们看到，问题不仅是信息问题，也是情绪压力问题。'],['用户流程图','我们梳理了从过敏设置到餐厅浏览和 电子卡分享的完整流程，发现安全信息需要更早出现，才能支持快速决策。']],
     testing:[['🍃','用户需要快速扫读','筛选和标签应该减少点餐时的阅读负担。'],['🕹️','个性化很重要','应用需要反映每个人具体的过敏原和舒适程度。'],['👂','沟通必须可分享','用户需要一种方式展示信息，而不是尴尬地反复解释。'],['💚','信任来自清晰语言','安全提示需要直接、明确、容易核对。']],
     pain:['用户在社交压力下需要反复解释同样的过敏信息。','菜单信息经常不完整或难以信任。','快速点餐时，关键安全信号不够明显。','用户同时需要速度和安全感。'],
-    highlights:[['Allergy setup','用户创建个人过敏档案，驱动筛选和安全标签。'],['Restaurant and dish discovery','浏览体验优先展示更安全选项，并在深入查看前展示过敏信息。'],['过敏卡','可分享的卡片帮助用户清楚地向餐厅工作人员沟通饮食限制。']],
+    highlights:[['过敏原设置','用户创建个人过敏档案，驱动筛选和安全标签。'],['展示安全选项','浏览体验优先展示更安全选项，并在深入查看前展示过敏信息。'],['过敏卡','可扫描的二维码以及具体的过敏信息帮助用户清楚地向餐厅工作人员沟通饮食限制。']],
     reflection:'SafeEats 让我们意识到，设计不仅要支持任务完成，也要回应用户在压力场景下的情绪。对过敏用户来说，界面不只是用来找信息，它也在帮助用户获得足够的信心去做决定。'
   },
   '4': {
@@ -4525,7 +4525,7 @@ function renderCaseStudy(caseId){
 
     <section class="case-section-wj"><h2>${bt('Background','背景')}</h2><div class="case-two-col"><div><p>${bt('People with food allergies often struggle to eat out safely because allergen information is unclear, incomplete, or difficult to access at the moment of decision. The risk is not only about finding information, but also about understanding it quickly and communicating needs clearly to restaurant staff.','食物过敏人群在外食时经常面临安全压力，因为过敏原信息不清楚、不完整，或很难在真正需要决策时快速找到。问题不只是缺少信息，也包括用户是否能快速理解信息，并清楚地向餐厅工作人员沟通需求。')}</p><p>${bt('Our project focused on interactions before and during dining out: choosing a restaurant, selecting dishes, checking ingredient safety, and sharing allergy needs with staff.','我们的项目关注外食前和外食过程中的关键交互：选择餐厅、选择菜品、确认食材安全，以及向工作人员沟通过敏需求。')}</p></div><div class="case-img-clean"><img src="assets/case-3-cover.png" alt="SafeEats cover" onerror="this.remove();this.parentElement.innerHTML='<span>project cover image</span>'"></div></div></section>
 
-    <section class="case-section-wj"><h2>${bt('The Product','产品')}</h2><div class="product-layout-wj"><div class="product-left-wj"><div class="product-copy-wj"><h3>SafeEats</h3><p>${bt('SafeEats is a mobile dining assistant with allergy setup, restaurant and dish filtering, allergen badges, saved preferences, and an allergy card users can show or share with restaurant staff.','SafeEats 是一款移动端外食助手，包含过敏设置、餐厅和菜品筛选、过敏原标签、保存偏好，以及可展示或分享给餐厅工作人员的过敏卡。')}</p></div><div class="product-main-slot"><img src="assets/case-3-product-main.png" alt="SafeEats product image" onerror="this.remove();this.parentElement.innerHTML='<span>4:3 product image</span>'"></div></div><div class="product-feature-stack"><div class="case-focus-card"><div class="audience">${bt('for allergic diners','面向过敏用户')}</div><h3>${bt('Safer discovery','更安全的发现')}</h3><p>${bt('Filter restaurants and dishes based on personal allergens and visible risk signals.','根据个人过敏原和可见风险提示筛选餐厅与菜品。')}</p></div><div class="case-focus-card"><div class="audience">${bt('for ordering moments','面向点餐场景')}</div><h3>${bt('Clear communication','清晰沟通')}</h3><p>${bt('Use an allergy card to reduce repeated explanation and make needs easier to understand.','用过敏卡减少重复解释，让需求更容易被理解。')}</p></div><div class="case-focus-card"><div class="audience">${bt('for repeated decisions','面向重复决策')}</div><h3>${bt('Personal memory','个人记忆')}</h3><p>${bt('Save safe places and preferences so future dining choices become faster.','保存安全地点和偏好，让未来外食决策更快。')}</p></div></div></div><div class="case-meta-grid"><div><h4>role</h4><p>UX Designer · UX Researcher</p></div><div><h4>crew</h4><p>3-person course team</p></div><div><h4>timeline</h4><p>2026</p></div><div><h4>platform</h4><p>Mobile app</p></div><div><h4>outcome</h4><p>High-fidelity prototype</p></div></div><div class="product-statement-wj"><div class="statement-label">${bt('Problem Statement','问题陈述')}</div><div class="statement-box"><p>${bt('How might we help people with food allergies feel confident and safe when dining out?','我们如何帮助食物过敏人群在外食时感到更自信、更安全？')}</p></div></div></section>
+    <section class="case-section-wj"><h2>${bt('The Product','产品')}</h2><div class="product-layout-wj"><div class="product-left-wj"><div class="product-copy-wj"><h3>SafeEats</h3><p>${bt('SafeEats is a mobile dining assistant with allergy setup, restaurant and dish filtering, allergen badges, saved preferences, and an allergy card users can show or share with restaurant staff.','SafeEats 是一款移动端外食助手，包含过敏设置、餐厅和菜品筛选、过敏原标签、保存偏好，以及可展示或分享给餐厅工作人员的过敏卡。')}</p></div><div class="product-main-slot"><img src="assets/case-3-product-main.png" alt="SafeEats product image" onerror="this.remove();this.parentElement.innerHTML='<span>4:3 product image</span>'"></div></div><div class="product-feature-stack"><div class="case-focus-card"><div class="audience">${bt('for allergic diners','面向过敏用户')}</div><h3>${bt('Safer discovery','更安全的发现')}</h3><p>${bt('Filter restaurants and dishes based on personal allergens and visible risk signals.','根据个人过敏原和可见风险提示筛选餐厅与菜品。')}</p></div><div class="case-focus-card"><div class="audience">${bt('for ordering moments','面向点餐场景')}</div><h3>${bt('Clear communication','清晰沟通')}</h3><p>${bt('Use an allergy card to reduce repeated explanation and make needs easier to understand.','用过敏卡减少重复解释，让需求更容易被理解。')}</p></div><div class="case-focus-card"><div class="audience">${bt('for repeated decisions','面向重复决策')}</div><h3>${bt('Personal memory','个人记忆')}</h3><p>${bt('Save safe places and preferences so future dining choices become faster.','保存安全地点和偏好，让未来外食决策更快。')}</p></div></div></div><div class="case-meta-grid"><div><h4>role</h4><p>UX Designer · UX Researcher</p></div><div><h4>crew</h4><p>3-person course team</p></div><div><h4>timeline</h4><p>2026</p></div><div><h4>platform</h4><p>Mobile app</p></div><div><h4>outcome</h4><p>High-fidelity prototype</p></div></div></section>
 
     <section class="case-section-wj"><h2>${bt('Competitor analysis','竞品分析')}</h2><p style="max-width:920px;margin-bottom:24px">${bt('Before interviewing users, we looked at direct, indirect, and analogous competitors to understand what existing tools already solved and where they still created friction for allergy-related dining.','在访谈之前，我们先分析了直接、间接和类比竞品，理解现有工具已经解决了什么，以及它们在过敏外食场景中仍然造成哪些摩擦。')}</p><div class="final-plan-grid competitor-grid"><div class="final-plan-card"><span class="final-plan-num">01</span><h3>Spokin</h3><p>${bt('As a direct competitor, Spokin showed the value of an allergy-focused community, venue categories, location-based browsing, reviews, and allergen filters. But its restaurant information can be sparse, outdated, and inconsistent, and it lacks strong dish-level verification.','作为直接竞品，Spokin 展示了过敏社区、场景分类、基于位置的浏览、评论和过敏原筛选的价值。但它的餐厅信息可能稀少、过时或不一致，也缺少强有力的菜品级验证。')}</p></div><div class="final-plan-card"><span class="final-plan-num">02</span><h3>${bt('Google Maps / Yelp','Google Maps / Yelp')}</h3><p>${bt('Mainstream restaurant platforms have broad coverage, navigation, photos, and ratings, but they do not let users store allergy profiles, apply standardized allergen filters, or quickly identify menu-level risks. Allergy information is often buried in reviews or missing entirely.','主流餐厅平台覆盖范围广，提供导航、照片和评分，但不能保存过敏档案、使用标准化过敏原筛选，或快速识别菜单级风险。过敏信息经常埋在评论里，甚至完全缺失。')}</p></div><div class="final-plan-card"><span class="final-plan-num">03</span><h3>Airbnb</h3><p>${bt('As an analogous competitor, Airbnb’s accessibility filters showed how specialized needs can be turned into searchable criteria. Its limitations also reminded us that self-reported information needs clearer standards and verification to build trust.','作为类比竞品，Airbnb 的无障碍筛选展示了如何把特殊需求转化为可搜索条件。它的局限也提醒我们，自我报告的信息需要更清晰的标准和验证机制，才能建立信任。')}</p></div><div class="final-plan-card"><span class="final-plan-num">04</span><h3>${bt('Design opportunity','设计机会')}</h3><p>${bt('The gap pointed toward standardized allergy selection, saved allergen filters, clear risk indicators, allergy-safety reviews, and a scannable e-card that helps restaurants understand user needs.','这些差距指向了标准化过敏原选择、可保存的过敏筛选、清晰风险提示、过敏安全评论，以及帮助餐厅理解用户需求的可扫码电子卡。')}</p></div></div></section>
 
@@ -4743,7 +4743,7 @@ function improveClassBridge(page, caseId){
   const persona=[...page.querySelectorAll('.case-section-wj')].find(sec=>/^Persona$|^用户画像$/.test(sectionTitleText(sec)));
   if(persona && !persona.querySelector('.persona-photo-slot')){
     const zh=document.body.classList.contains('lang-zh');
-    persona.innerHTML=`<h2>${zh?'用户画像':'Persona'}</h2><div class="user-grid persona-with-photo"><div class="persona-photo-slot"><img src="assets/case-4-persona.png" alt="ClassBridge persona" onerror="this.remove();this.parentElement.innerHTML='<span>${zh?'用户画像图片':'persona photo'}</span>'"></div><div class="persona-wj"><div class="name">${zh?'David，忙碌的一线教师':'David, the busy classroom teacher'}</div><p>${zh?'David 每天需要发布作业、查看出勤、更新成绩，并同时回应学生和家长的信息。现在这些任务分散在不同平台中，让他很难保持信息同步。':'David posts assignments, checks attendance, updates grades, and responds to students and parents every day. These tasks are spread across different platforms, making it hard to keep information aligned.'}</p><p>${zh?'他需要一个统一平台，把课程内容、学业数据和日常沟通连接起来，减少重复操作，并让不同角色看到与自己相关的信息。':'He needs one platform that connects course content, academic data, and daily communication, reducing repeated work while showing each role the information they need.'}</p><div class="journey-list"><div class="journey-item"><strong>${zh?'场景':'Context'}</strong><p>${zh?'教师、学生和家长的信息被分散在多个工具中。':'Teachers, students, and parents rely on multiple disconnected tools.'}</p></div><div class="journey-item"><strong>${zh?'行为':'Behavior'}</strong><p>${zh?'频繁切换系统来发布、查询和沟通。':'Switches between systems to post, check, and communicate.'}</p></div><div class="journey-item"><strong>${zh?'担忧':'Concern'}</strong><p>${zh?'重要消息、作业或学生进度容易被遗漏。':'Important messages, assignments, or progress updates can be missed.'}</p></div><div class="journey-item"><strong>${zh?'目标':'Goal'}</strong><p>${zh?'用一个清晰平台完成教学管理与沟通。':'Use one clear platform for teaching management and communication.'}</p></div></div></div></div>`;
+    persona.innerHTML=`<h2>${zh?'用户画像':'Persona'}</h2><div class="user-grid persona-with-photo"><div class="persona-photo-slot"><img src="assets/case-4-persona.png" alt="ClassBridge persona" onerror="this.remove();this.parentElement.innerHTML='<span>${zh?'用户画像图片':'persona photo'}</span>'"></div><div class="persona-wj"><div class="name">${zh?'Eva，忙碌的一线教师':'Eva, the busy classroom teacher'}</div><p>${zh?'Eva 每天需要发布作业、查看出勤、更新成绩，并同时回应学生和家长的信息。现在这些任务分散在不同平台中，让她很难保持信息同步。':'Eva posts assignments, checks attendance, updates grades, and responds to students and parents every day. These tasks are spread across different platforms, making it hard to keep information aligned.'}</p><p>${zh?'她需要一个统一平台，把课程内容、学业数据和日常沟通连接起来，减少重复操作，并让不同角色看到与自己相关的信息。':'She needs one platform that connects course content, academic data, and daily communication, reducing repeated work while showing each role the information they need.'}</p><div class="journey-list"><div class="journey-item"><strong>${zh?'场景':'Context'}</strong><p>${zh?'教师、学生和家长的信息被分散在多个工具中。':'Teachers, students, and parents rely on multiple disconnected tools.'}</p></div><div class="journey-item"><strong>${zh?'行为':'Behavior'}</strong><p>${zh?'频繁切换系统来发布、查询和沟通。':'Switches between systems to post, check, and communicate.'}</p></div><div class="journey-item"><strong>${zh?'担忧':'Concern'}</strong><p>${zh?'重要消息、作业或学生进度容易被遗漏。':'Important messages, assignments, or progress updates can be missed.'}</p></div><div class="journey-item"><strong>${zh?'目标':'Goal'}</strong><p>${zh?'用一个清晰平台完成教学管理与沟通。':'Use one clear platform for teaching management and communication.'}</p></div></div></div></div>`;
   }
 }
 function normalizeCaseStudyLayout(caseId){
@@ -5036,7 +5036,7 @@ document.querySelectorAll('.photo-wall img').forEach(function(img){
     removeByTitle(page,[/^Minimum Viable Product|^最小可行产品范围定义/]);
     const persona=findSection(page,[/^Persona$|^用户画像$/,/^User Persona$|^用户画像$/,/^Who are our users$|^用户是谁$/]);
     if(persona){
-      persona.innerHTML=`<h2>${T('User Persona','用户画像')}</h2><div class="user-grid persona-with-photo"><div class="persona-photo-slot"><img src="assets/case-4-persona.png" alt="ClassBridge persona" onerror="this.remove();this.parentElement.innerHTML='<span>${T('persona photo','用户画像图片')}</span>'"></div><div class="persona-wj"><div class="name">${T('David, the overloaded classroom teacher','David，工具负担过重的一线教师')}</div><p>${T('David teaches multiple classes and needs to post assignments, update attendance, check grades, and communicate with students and parents every day. These tasks currently happen across several disconnected tools.','David 负责多个班级，每天需要发布作业、更新出勤、查看成绩，并与学生和家长沟通。现在这些任务分散在多个互不连接的工具中。')}</p><p>${T('He needs one role-based platform where course content, academic tracking, messaging, and school community updates can work together without forcing him to repeat information across systems.','他需要一个基于角色的统一平台，让课程内容、学业追踪、消息和校园社区更新连接在一起，而不是让他在不同系统中反复发布信息。')}</p><div class="persona-context-block"><div class="journey-list"><div class="journey-item"><strong>${T('Context','场景')}</strong><p>${T('Multiple school tools split communication, grades, attendance, and class updates.','多个学校工具把沟通、成绩、出勤和班级更新拆散。')}</p></div><div class="journey-item"><strong>${T('Behavior','行为')}</strong><p>${T('He switches platforms to post, check, message, and follow up.','他需要切换平台来发布、查看、发消息和跟进。')}</p></div><div class="journey-item"><strong>${T('Concern','担忧')}</strong><p>${T('Important updates can be missed when every task lives in a different place.','当每个任务都在不同地方时，重要更新很容易被遗漏。')}</p></div><div class="journey-item"><strong>${T('Goal','目标')}</strong><p>${T('Manage teaching and communication from one clear daily workspace.','在一个清晰的日常工作空间中完成教学管理和沟通。')}</p></div></div></div></div></div>`;
+      persona.innerHTML=`<h2>${T('User Persona','用户画像')}</h2><div class="user-grid persona-with-photo"><div class="persona-photo-slot"><img src="assets/case-4-persona.png" alt="ClassBridge persona" onerror="this.remove();this.parentElement.innerHTML='<span>${T('persona photo','用户画像图片')}</span>'"></div><div class="persona-wj"><div class="name">${T('Eva, the busy classroom teacher','Eva，忙碌的一线教师')}</div><p>${T('Eva teaches multiple classes and needs to post assignments, update attendance, check grades, and communicate with students and parents every day. These tasks currently happen across several disconnected tools.','Eva 负责多个班级，每天需要发布作业、更新出勤、查看成绩，并与学生和家长沟通。现在这些任务分散在多个互不连接的工具中。')}</p><p>${T('She needs one role-based platform where course content, academic tracking, messaging, and school community updates can work together without forcing her to repeat information across systems.','她需要一个基于角色的统一平台，让课程内容、学业追踪、消息和校园社区更新连接在一起，而不是让她在不同系统中反复发布信息。')}</p><div class="persona-context-block"><div class="journey-list"><div class="journey-item"><strong>${T('Context','场景')}</strong><p>${T('Multiple school tools split communication, grades, attendance, and class updates.','多个学校工具把沟通、成绩、出勤和班级更新拆散。')}</p></div><div class="journey-item"><strong>${T('Behavior','行为')}</strong><p>${T('She switches platforms to post, check, message, and follow up.','她需要切换平台来发布、查看、发消息和跟进。')}</p></div><div class="journey-item"><strong>${T('Concern','担忧')}</strong><p>${T('Important updates can be missed when every task lives in a different place.','当每个任务都在不同地方时，重要更新很容易被遗漏。')}</p></div><div class="journey-item"><strong>${T('Goal','目标')}</strong><p>${T('Manage teaching and communication from one clear daily workspace.','在一个清晰的日常工作空间中完成教学管理和沟通。')}</p></div></div></div></div></div>`;
     }
   };
 
@@ -5130,12 +5130,12 @@ document.querySelectorAll('.photo-wall img').forEach(function(img){
       <div class="user-grid persona-with-photo">
         <div class="persona-photo-slot"><img src="assets/case-4-persona.png" alt="ClassBridge persona" onerror="this.remove();this.parentElement.innerHTML='<span>${B('persona photo','用户画像图片')}</span>'"></div>
         <div class="persona-wj">
-          <div class="name">${B('David, the overloaded classroom teacher','David，工具负担过重的一线教师')}</div>
-          <p>${B('David teaches multiple classes and needs to post assignments, update attendance, check grades, and communicate with students and parents every day. These tasks currently happen across several disconnected tools.','David 负责多个班级，每天需要发布作业、更新出勤、查看成绩，并与学生和家长沟通。现在这些任务分散在多个互不连接的工具中。')}</p>
-          <p>${B('He needs one role-based platform where course content, academic tracking, messaging, and school community updates can work together without forcing him to repeat information across systems.','他需要一个基于角色的统一平台，让课程内容、学业追踪、消息和校园社区更新连接在一起，而不是在不同系统中反复发布信息。')}</p>
+          <div class="name">${B('Eva, the busy classroom teacher','Eva，忙碌的一线教师')}</div>
+          <p>${B('Eva teaches multiple classes and needs to post assignments, update attendance, check grades, and communicate with students and parents every day. These tasks currently happen across several disconnected tools.','Eva 负责多个班级，每天需要发布作业、更新出勤、查看成绩，并与学生和家长沟通。现在这些任务分散在多个互不连接的工具中。')}</p>
+          <p>${B('She needs one role-based platform where course content, academic tracking, messaging, and school community updates can work together without forcing her to repeat information across systems.','她需要一个基于角色的统一平台，让课程内容、学业追踪、消息和校园社区更新连接在一起，而不是让她在不同系统中反复发布信息。')}</p>
           <div class="persona-context-block"><div class="journey-list">
             <div class="journey-item"><strong>${B('Context','场景')}</strong><p>${B('Multiple school tools split communication, grades, attendance, and class updates.','多个学校工具把沟通、成绩、出勤和班级更新拆散。')}</p></div>
-            <div class="journey-item"><strong>${B('Behavior','行为')}</strong><p>${B('He switches platforms to post, check, message, and follow up.','他需要切换平台来发布、查看、发消息和跟进。')}</p></div>
+            <div class="journey-item"><strong>${B('Behavior','行为')}</strong><p>${B('She switches platforms to post, check, message, and follow up.','她需要切换平台来发布、查看、发消息和跟进。')}</p></div>
             <div class="journey-item"><strong>${B('Concern','担忧')}</strong><p>${B('Important updates can be missed when every task lives in a different place.','当每个任务都在不同地方时，重要更新很容易被遗漏。')}</p></div>
             <div class="journey-item"><strong>${B('Goal','目标')}</strong><p>${B('Manage teaching and communication from one clear daily workspace.','在一个清晰的日常工作空间中完成教学管理和沟通。')}</p></div>
           </div></div>
@@ -5509,7 +5509,6 @@ document.querySelectorAll('.photo-wall img').forEach(function(img){
     ],
     '3': [
       ['Competitor Analysis','竞品分析','We reviewed existing food allergy and restaurant decision tools to understand how they handled ingredient visibility, filtering, saved preferences, and communication with restaurant staff. The comparison showed that SafeEats needed to combine personal filtering with clearer real-world communication support.','我们分析了现有的食物过敏和餐厅决策工具，了解它们如何处理食材可见性、筛选、保存偏好，以及与餐厅工作人员的沟通。对比显示，SafeEats 需要同时支持个性化筛选和更清楚的现实沟通。'],
-      ['User Interviews','用户访谈','We conducted six interviews with people who had different dietary restrictions and allergy situations, including vegetarian, celiac, mango allergy, and seafood or shellfish allergies. The interviews explored dining experiences, restaurant selection, ordering behavior, existing tools, and the most inconvenient moments in eating out.','我们进行了 6 次访谈，参与者包括素食、乳糜泻、芒果过敏、海鲜或贝类过敏等不同饮食限制和过敏情况。访谈围绕外食经历、餐厅选择、点餐行为、现有工具，以及外食过程中最不方便的部分展开。'],
       ['Affinity Mapping','亲和图分析','We grouped interview notes into recurring themes such as unclear menu information, repeated explanations, staff communication anxiety, cross-contamination concerns, and the need to plan ahead. This made it clear that the product needed to support decision-making and communication, not only store allergy information.','我们将访谈记录整理成反复出现的主题，例如菜单信息不清、反复解释、与店员沟通焦虑、交叉污染担忧，以及需要提前计划。这个过程让我们明确，产品不应该只是储存过敏信息，而需要支持用户做决定和沟通。'],
       ['User Flow Mapping','用户流程图','We mapped the full flow from allergy setup to restaurant browsing, dish filtering, saved places, and allergy card sharing. The flow helped us connect personal preferences to the actual dining moment, so users would not need to re-enter or re-explain the same information repeatedly.','我们梳理了从过敏设置、餐厅浏览、菜品筛选、收藏餐厅，到分享过敏卡的完整流程。流程图帮助我们把个人偏好连接到真实外食场景，让用户不需要反复输入或解释同样的信息。'],
       ['Paper Prototype','纸面原型','The paper prototype established the core flow: logging in, adding allergy information, filtering restaurants, viewing restaurant and dish details, and accessing the allergy card. This stage helped us quickly compare layout options and confirm that filtering and allergy communication needed to be central features.','纸面原型建立了核心流程：登录、添加过敏信息、筛选餐厅、查看餐厅和菜品详情，以及访问过敏卡。这个阶段帮助我们快速比较布局方案，并确认筛选和过敏沟通必须成为核心功能。'],
@@ -7284,6 +7283,698 @@ document.querySelectorAll('.photo-wall img').forEach(function(img){
     setTimeout(unifyRadius, 200);
     setTimeout(unifyRadius, 600);
   };
+})();
+</script>
+
+<!-- FINAL PATCH 2026-05-07 (case 1 research methods): vertical centering, sized
+     to match copy column, unified rounded corners. Loaded last so it overrides
+     all earlier rules. Targets every research-split-section across cases, but
+     Perci Ready (case 1) is the immediate visual fix. -->
+<style id="research-row-image-final-patch">
+  /* ---------- All research method rows (case 1 included) ---------- */
+  #page-case .research-split-section .method-row{
+    display:grid !important;
+    align-items:center !important;
+    padding:32px 0 !important;
+  }
+  #page-case .research-split-section .method-row > .method-copy,
+  #page-case .research-split-section .method-row > .method-visual-wj{
+    align-self:center !important;
+  }
+
+  /* Image container: full width of its grid track, no clipped fixed slot */
+  #page-case .research-split-section .method-visual-wj,
+  #page-case .research-split-section .method-visual-wj.photo-slot{
+    width:100% !important;
+    max-width:100% !important;
+    min-height:0 !important;
+    height:auto !important;
+    padding:0 !important;
+    background:transparent !important;
+    border:0 !important;
+    box-shadow:none !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    overflow:hidden !important;
+    border-radius:22px !important;
+  }
+
+  /* Image itself: sized to fill, true center-center, unified rounded corners */
+  #page-case .research-split-section .method-visual-wj img,
+  #page-case .research-split-section .method-visual-wj.photo-slot img{
+    display:block !important;
+    width:100% !important;
+    max-width:100% !important;
+    height:auto !important;
+    max-height:none !important;
+    object-fit:contain !important;
+    object-position:center center !important;
+    border-radius:22px !important;
+    margin:0 !important;
+  }
+
+  /* Desktop: balance the two columns so the image is large and reads at the
+     same visual weight as the copy block. Slightly favor copy (it has 4-5
+     lines of body text), but the image stays generous. */
+  @media (min-width:900px){
+    #page-case .research-split-section .method-row{
+      grid-template-columns:minmax(0,1fr) minmax(0,1fr) !important;
+      gap:48px !important;
+      align-items:center !important;
+    }
+    #page-case .research-split-section .method-visual-wj img,
+    #page-case .research-split-section .method-visual-wj.photo-slot img{
+      max-height:420px !important;
+    }
+  }
+
+  /* Mobile: stack, image keeps rounded corners and reasonable height */
+  @media (max-width:899px){
+    #page-case .research-split-section .method-row{
+      grid-template-columns:1fr !important;
+      gap:22px !important;
+    }
+    #page-case .research-split-section .method-visual-wj img,
+    #page-case .research-split-section .method-visual-wj.photo-slot img{
+      max-height:none !important;
+    }
+  }
+
+  /* Empty placeholder (when img.onerror clears the src) keeps a soft frame */
+  #page-case .research-split-section .method-visual-wj:not(:has(img)){
+    min-height:220px !important;
+    background:rgba(255,250,242,.55) !important;
+  }
+</style>
+<script id="research-row-image-final-patch-script">
+(function(){
+  // Belt-and-braces: scrub any inline styles that earlier patches added to
+  // research-row images, so the CSS above can win without specificity wars.
+  function scrub(){
+    const page = document.getElementById('page-case');
+    if(!page) return;
+    page.querySelectorAll('.research-split-section .method-visual-wj').forEach(box => {
+      box.style.minHeight = '';
+      box.style.height = '';
+      box.style.maxWidth = '';
+      box.style.padding = '';
+      box.style.background = '';
+      box.style.borderRadius = '22px';
+      box.style.overflow = 'hidden';
+      box.style.alignItems = 'center';
+      box.style.justifyContent = 'center';
+      box.style.display = 'flex';
+    });
+    page.querySelectorAll('.research-split-section .method-visual-wj img').forEach(img => {
+      img.style.width = '100%';
+      img.style.height = 'auto';
+      img.style.maxHeight = '';
+      img.style.objectFit = 'contain';
+      img.style.objectPosition = 'center center';
+      img.style.borderRadius = '22px';
+      img.style.margin = '0';
+    });
+    page.querySelectorAll('.research-split-section .method-row').forEach(row => {
+      row.style.alignItems = 'center';
+    });
+  }
+  function run(){
+    scrub();
+    setTimeout(scrub, 120);
+    setTimeout(scrub, 480);
+    setTimeout(scrub, 1100);
+  }
+  document.addEventListener('DOMContentLoaded', run);
+  document.addEventListener('click', function(e){
+    if(e.target.closest('[data-case], [data-page], .lang-toggle button')){
+      setTimeout(scrub, 120);
+      setTimeout(scrub, 480);
+      setTimeout(scrub, 1100);
+    }
+  }, true);
+  const prev = window.normalizeCaseStudyLayout;
+  window.normalizeCaseStudyLayout = function(caseId){
+    if(typeof prev === 'function') prev(caseId);
+    setTimeout(scrub, 0);
+    setTimeout(scrub, 220);
+    setTimeout(scrub, 700);
+  };
+})();
+</script>
+
+<!-- FINAL PATCH 2026-05-07 (round 2): three specific image fixes
+     1. case 1 INTERACTION MAPPING image — needs visible 22px rounded corners
+     2. case 2 PausePad PRODUCT image — currently too tall/large, no rounding
+     3. case 2 USER ENACTMENT image — currently too small + no rounding,
+        because pausepad-user-enactment-section earlier sets radius:0 and
+        object-position:top left. Override here, last in file. -->
+<style id="round2-three-image-fixes">
+  /* ---------- 1. CASE 1 INTERACTION MAPPING (and the rest of research rows):
+        ensure the rounded-corner border-radius is visually obvious by
+        clipping at the container level with overflow:hidden. The earlier
+        patch already centers / sizes the image, this one only reinforces the
+        clip + radius so it survives any later re-style. ---------- */
+  #page-case .research-split-section .method-visual-wj,
+  #page-case .research-split-section .method-visual-wj.photo-slot{
+    border-radius:22px !important;
+    overflow:hidden !important;
+  }
+  #page-case .research-split-section .method-visual-wj img,
+  #page-case .research-split-section .method-visual-wj.photo-slot img{
+    border-radius:22px !important;
+  }
+
+  /* ---------- 2. CASE 2 PAUSEPAD "THE PRODUCT" image ----------
+     The default .product-main-slot is a 4/3 box that, on case 2's full-bleed
+     hero photo, ends up taller than the copy column. Cap it at the height of
+     the copy block and add the unified 22px corners. */
+  @media (min-width:900px){
+    #page-case[data-case="2"] .product-main-slot,
+    #page-case .product-section-wj .product-main-slot{
+      width:100% !important;
+      max-width:100% !important;
+      aspect-ratio:auto !important;
+      height:auto !important;
+      max-height:340px !important;
+      border-radius:22px !important;
+      overflow:hidden !important;
+      align-self:center !important;
+    }
+    #page-case[data-case="2"] .product-main-slot img,
+    #page-case .product-section-wj .product-main-slot img{
+      width:100% !important;
+      height:100% !important;
+      max-height:340px !important;
+      object-fit:cover !important;
+      object-position:center center !important;
+      border-radius:22px !important;
+      display:block !important;
+    }
+  }
+
+  /* ---------- 3. CASE 2 USER ENACTMENT image ----------
+     Earlier rules force border-radius:0, object-position:top left, and
+     object-fit:contain inside a 520px-tall box, which makes a small image sit
+     in the top-left corner of an empty-looking frame. Override here:
+     - real 22px corners with overflow clip
+     - center the image in the box
+     - reasonable height that matches the copy column on its right
+     - remove the `align-items:flex-start` so the image is vertically centered */
+  .pausepad-user-enactment-section .method-row{
+    align-items:center !important;
+  }
+  .pausepad-user-enactment-section .method-visual-wj,
+  .pausepad-user-enactment-section .method-visual-wj.photo-slot,
+  .pausepad-user-enactment-section .pausepad-user-enactment-photo{
+    height:auto !important;
+    min-height:0 !important;
+    max-height:none !important;
+    background:transparent !important;
+    border-radius:22px !important;
+    overflow:hidden !important;
+    padding:0 !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    align-self:center !important;
+    position:static !important;
+  }
+  .pausepad-user-enactment-section .method-visual-wj img,
+  .pausepad-user-enactment-section .method-visual-wj.photo-slot img,
+  .pausepad-user-enactment-section .pausepad-user-enactment-photo img{
+    width:100% !important;
+    height:auto !important;
+    max-height:none !important;
+    object-fit:cover !important;
+    object-position:center center !important;
+    border-radius:22px !important;
+    display:block !important;
+    margin:0 !important;
+    border:0 !important;
+    box-shadow:none !important;
+    background:transparent !important;
+  }
+  /* The earlier <span> overlay (positioned absolute) is no longer relevant
+     once the image is centered correctly — hide if it's empty. */
+  .pausepad-user-enactment-section .method-visual-wj span:empty{display:none !important;}
+
+  /* Re-balance the User Enactment two-column ratio so the image column has a
+     real width (was 34/66 before, image looked tiny). */
+  @media (min-width:900px){
+    .pausepad-user-enactment-section .method-row{
+      grid-template-columns:minmax(0,1fr) minmax(0,1.05fr) !important;
+      gap:48px !important;
+    }
+  }
+  @media (max-width:899px){
+    .pausepad-user-enactment-section .method-visual-wj,
+    .pausepad-user-enactment-section .pausepad-user-enactment-photo{
+      height:auto !important;
+    }
+  }
+</style>
+<script id="round2-three-image-fixes-script">
+(function(){
+  function applyRound2(){
+    const page = document.getElementById('page-case');
+    if(!page) return;
+    const caseId = String(window.currentCaseId || page.getAttribute('data-case') || '');
+
+    // 1. case 1 research rows — reinforce border-radius/overflow on inline styles
+    page.querySelectorAll('.research-split-section .method-visual-wj').forEach(box => {
+      box.style.borderRadius = '22px';
+      box.style.overflow = 'hidden';
+    });
+    page.querySelectorAll('.research-split-section .method-visual-wj img').forEach(img => {
+      img.style.borderRadius = '22px';
+    });
+
+    // 2. case 2 product image
+    if(caseId === '2'){
+      page.querySelectorAll('.product-section-wj .product-main-slot').forEach(box => {
+        box.style.aspectRatio = 'auto';
+        box.style.maxHeight = '340px';
+        box.style.height = 'auto';
+        box.style.borderRadius = '22px';
+        box.style.overflow = 'hidden';
+      });
+      page.querySelectorAll('.product-section-wj .product-main-slot img').forEach(img => {
+        img.style.maxHeight = '340px';
+        img.style.height = '100%';
+        img.style.width = '100%';
+        img.style.objectFit = 'cover';
+        img.style.objectPosition = 'center center';
+        img.style.borderRadius = '22px';
+      });
+    }
+
+    // 3. case 2 user enactment image — undo the earlier forced corner clamps
+    page.querySelectorAll('.pausepad-user-enactment-section .method-visual-wj, .pausepad-user-enactment-section .pausepad-user-enactment-photo').forEach(box => {
+      box.style.height = 'auto';
+      box.style.minHeight = '0';
+      box.style.maxHeight = 'none';
+      box.style.borderRadius = '22px';
+      box.style.overflow = 'hidden';
+      box.style.alignItems = 'center';
+      box.style.justifyContent = 'center';
+      box.style.position = 'static';
+    });
+    page.querySelectorAll('.pausepad-user-enactment-section .method-visual-wj img, .pausepad-user-enactment-section .pausepad-user-enactment-photo img').forEach(img => {
+      img.style.width = '100%';
+      img.style.height = 'auto';
+      img.style.maxHeight = 'none';
+      img.style.objectFit = 'cover';
+      img.style.objectPosition = 'center center';
+      img.style.borderRadius = '22px';
+      img.style.display = 'block';
+    });
+    page.querySelectorAll('.pausepad-user-enactment-section .method-row').forEach(row => {
+      row.style.alignItems = 'center';
+    });
+  }
+
+  function run(){
+    applyRound2();
+    setTimeout(applyRound2, 120);
+    setTimeout(applyRound2, 480);
+    setTimeout(applyRound2, 1100);
+  }
+  document.addEventListener('DOMContentLoaded', run);
+  document.addEventListener('click', function(e){
+    if(e.target.closest('[data-case], [data-page], .lang-toggle button')){
+      setTimeout(applyRound2, 120);
+      setTimeout(applyRound2, 480);
+      setTimeout(applyRound2, 1100);
+    }
+  }, true);
+  const prev = window.normalizeCaseStudyLayout;
+  window.normalizeCaseStudyLayout = function(caseId){
+    if(typeof prev === 'function') prev(caseId);
+    setTimeout(applyRound2, 0);
+    setTimeout(applyRound2, 220);
+    setTimeout(applyRound2, 700);
+  };
+})();
+</script>
+
+<!-- FINAL PATCH 2026-05-07 (round 3): case 3 specific image fixes
+     1. case 3 WIREFRAME AND HEURISTIC EVALUATION (two rows) — images too
+        small relative to copy + rounded corners not visible
+     2. case 3 STORYBOARD — image not vertically centered + no rounded corners
+     -->
+<style id="round3-case3-image-fixes">
+  /* ---------- 1. CASE 3 WIREFRAME AND HEURISTIC EVALUATION ---------- */
+  /* Make the image column equal weight to the copy column, raise the height
+     cap, and force a unified 22px rounded corner that's visually obvious. */
+  @media (min-width:900px){
+    #page-case .wireframe-eval-row{
+      grid-template-columns:minmax(0,1fr) minmax(0,1fr) !important;
+      gap:48px !important;
+      align-items:center !important;
+      padding:36px 0 !important;
+    }
+    #page-case .wireframe-eval-row > .case-img-clean{
+      align-self:center !important;
+      width:100% !important;
+      max-width:100% !important;
+      margin:0 !important;
+    }
+    #page-case .wireframe-eval-row > .case-img-clean img{
+      width:100% !important;
+      max-width:100% !important;
+      height:auto !important;
+      max-height:460px !important;
+      object-fit:contain !important;
+      object-position:center center !important;
+    }
+  }
+  #page-case .wireframe-eval-row > .case-img-clean,
+  #page-case .wireframe-eval-row > .case-img-clean img{
+    border-radius:22px !important;
+  }
+  #page-case .wireframe-eval-row > .case-img-clean{
+    overflow:hidden !important;
+    background:transparent !important;
+  }
+
+  /* ---------- 2. CASE 3 STORYBOARD ---------- */
+  /* The current rule (.safeeats-storyboard-section .storyboard-image-slot)
+     uses align-items:center on the grid but the image still appears to
+     start at the top because object-position is center top somewhere up the
+     cascade and because no max-height bounds it. Force true centering and
+     unified 22px corners. */
+  #page-case .safeeats-storyboard-section .case-two-col{
+    align-items:center !important;
+  }
+  #page-case .safeeats-storyboard-section .case-two-col > div:first-child{
+    align-self:center !important;
+  }
+  #page-case .safeeats-storyboard-section .storyboard-image-slot,
+  #page-case .safeeats-storyboard-section .storyboard-image-slot.case-img-clean{
+    align-self:center !important;
+    width:100% !important;
+    max-width:100% !important;
+    height:auto !important;
+    min-height:0 !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    background:transparent !important;
+    border-radius:22px !important;
+    overflow:hidden !important;
+    margin:0 !important;
+  }
+  #page-case .safeeats-storyboard-section .storyboard-image-slot img,
+  #page-case .safeeats-storyboard-section .storyboard-image-slot.case-img-clean img{
+    width:100% !important;
+    height:auto !important;
+    max-height:560px !important;
+    object-fit:contain !important;
+    object-position:center center !important;
+    border-radius:22px !important;
+    display:block !important;
+    margin:0 auto !important;
+  }
+  @media (min-width:900px){
+    #page-case .safeeats-storyboard-section .case-two-col{
+      grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr) !important;
+      gap:48px !important;
+      align-items:center !important;
+    }
+  }
+</style>
+<script id="round3-case3-image-fixes-script">
+(function(){
+  function applyRound3(){
+    const page = document.getElementById('page-case');
+    if(!page) return;
+    const caseId = String(window.currentCaseId || page.getAttribute('data-case') || '');
+    if(caseId !== '3') return;
+
+    // 1. Wireframe & Heuristic — both image cells
+    page.querySelectorAll('.wireframe-eval-row > .case-img-clean').forEach(box => {
+      box.style.borderRadius = '22px';
+      box.style.overflow = 'hidden';
+      box.style.background = 'transparent';
+      box.style.alignSelf = 'center';
+      box.style.maxWidth = '100%';
+      box.style.width = '100%';
+    });
+    page.querySelectorAll('.wireframe-eval-row > .case-img-clean img').forEach(img => {
+      img.style.width = '100%';
+      img.style.maxWidth = '100%';
+      img.style.height = 'auto';
+      img.style.maxHeight = '460px';
+      img.style.objectFit = 'contain';
+      img.style.objectPosition = 'center center';
+      img.style.borderRadius = '22px';
+    });
+    page.querySelectorAll('.wireframe-eval-row').forEach(row => {
+      row.style.alignItems = 'center';
+    });
+
+    // 2. SafeEats storyboard
+    page.querySelectorAll('.safeeats-storyboard-section .storyboard-image-slot').forEach(box => {
+      box.style.borderRadius = '22px';
+      box.style.overflow = 'hidden';
+      box.style.background = 'transparent';
+      box.style.alignSelf = 'center';
+      box.style.height = 'auto';
+      box.style.minHeight = '0';
+      box.style.alignItems = 'center';
+      box.style.justifyContent = 'center';
+      box.style.display = 'flex';
+    });
+    page.querySelectorAll('.safeeats-storyboard-section .storyboard-image-slot img').forEach(img => {
+      img.style.width = '100%';
+      img.style.height = 'auto';
+      img.style.maxHeight = '560px';
+      img.style.objectFit = 'contain';
+      img.style.objectPosition = 'center center';
+      img.style.borderRadius = '22px';
+      img.style.display = 'block';
+      img.style.margin = '0 auto';
+    });
+    page.querySelectorAll('.safeeats-storyboard-section .case-two-col').forEach(grid => {
+      grid.style.alignItems = 'center';
+    });
+  }
+
+  function run(){
+    applyRound3();
+    setTimeout(applyRound3, 120);
+    setTimeout(applyRound3, 480);
+    setTimeout(applyRound3, 1100);
+  }
+  document.addEventListener('DOMContentLoaded', run);
+  document.addEventListener('click', function(e){
+    if(e.target.closest('[data-case], [data-page], .lang-toggle button')){
+      setTimeout(applyRound3, 120);
+      setTimeout(applyRound3, 480);
+      setTimeout(applyRound3, 1100);
+    }
+  }, true);
+  const prev = window.normalizeCaseStudyLayout;
+  window.normalizeCaseStudyLayout = function(caseId){
+    if(typeof prev === 'function') prev(caseId);
+    setTimeout(applyRound3, 0);
+    setTimeout(applyRound3, 220);
+    setTimeout(applyRound3, 700);
+  };
+})();
+</script>
+
+<!-- FINAL PATCH 2026-05-08 (round 4): definitive fix for PausePad User Enactment.
+     Previous round 2 set object-fit:cover with height:auto, which caused the
+     image to render at "image-aspect-ratio × column-width" — way shorter than
+     the 6-item numbered list on the right. The image then appeared "too small"
+     and the corners weren't visible because the image left a tall halo of
+     page background above and below it.
+
+     Fix:
+       - widen image column to a true 1:1 share with the copy
+       - use cover with a fixed reasonable height (matches copy block visually)
+       - vertically center via the grid
+       - clip with overflow:hidden + 22px on the wrapper so corners actually show
+     This is loaded last in <body> so it wins on source order. -->
+<style id="round4-pausepad-ue-final">
+  /* The wrapper section is a grid row; force balanced columns and centering. */
+  #page-case .pausepad-user-enactment-section .method-row,
+  .pausepad-user-enactment-section .method-row{
+    display:grid !important;
+    grid-template-columns:minmax(0,1fr) minmax(0,1fr) !important;
+    gap:48px !important;
+    align-items:center !important;
+    padding:0 !important;
+    border-top:0 !important;
+  }
+
+  /* Image wrapper: real height, real corners, real clip. */
+  #page-case .pausepad-user-enactment-section .method-visual-wj,
+  #page-case .pausepad-user-enactment-section .method-visual-wj.photo-slot,
+  #page-case .pausepad-user-enactment-section .pausepad-user-enactment-photo,
+  .pausepad-user-enactment-section .method-visual-wj,
+  .pausepad-user-enactment-section .method-visual-wj.photo-slot,
+  .pausepad-user-enactment-section .pausepad-user-enactment-photo{
+    position:static !important;
+    width:100% !important;
+    max-width:100% !important;
+    height:auto !important;
+    min-height:0 !important;
+    max-height:none !important;
+    margin:0 !important;
+    padding:0 !important;
+    background:transparent !important;
+    border:0 !important;
+    border-radius:22px !important;
+    overflow:hidden !important;
+    box-shadow:none !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    align-self:center !important;
+    color:transparent !important;
+    font-size:0 !important;
+    line-height:0 !important;
+  }
+
+  /* Hide the absolutely-positioned <span> overlay that the original CSS
+     placed at center of the box — it's irrelevant once the image is real. */
+  #page-case .pausepad-user-enactment-section .method-visual-wj span,
+  .pausepad-user-enactment-section .method-visual-wj span{
+    display:none !important;
+  }
+
+  /* Image itself: contain (preserve full picture), large enough to read. */
+  #page-case .pausepad-user-enactment-section .method-visual-wj img,
+  #page-case .pausepad-user-enactment-section .method-visual-wj.photo-slot img,
+  #page-case .pausepad-user-enactment-section .pausepad-user-enactment-photo img,
+  .pausepad-user-enactment-section .method-visual-wj img,
+  .pausepad-user-enactment-section .method-visual-wj.photo-slot img,
+  .pausepad-user-enactment-section .pausepad-user-enactment-photo img{
+    position:static !important;
+    display:block !important;
+    width:100% !important;
+    max-width:100% !important;
+    height:auto !important;
+    max-height:none !important;
+    object-fit:contain !important;
+    object-position:center center !important;
+    border:0 !important;
+    border-radius:22px !important;
+    margin:0 auto !important;
+    padding:0 !important;
+    background:transparent !important;
+    box-shadow:none !important;
+    transform:none !important;
+  }
+
+  @media (max-width:899px){
+    #page-case .pausepad-user-enactment-section .method-row,
+    .pausepad-user-enactment-section .method-row{
+      grid-template-columns:1fr !important;
+      gap:24px !important;
+    }
+  }
+</style>
+<script id="round4-pausepad-ue-final-script">
+(function(){
+  function applyRound4(){
+    const page = document.getElementById('page-case');
+    if(!page) return;
+    const caseId = String(window.currentCaseId || page.getAttribute('data-case') || '');
+    if(caseId !== '2') return;
+
+    page.querySelectorAll('.pausepad-user-enactment-section .method-row').forEach(row => {
+      row.style.gridTemplateColumns = 'minmax(0,1fr) minmax(0,1fr)';
+      row.style.alignItems = 'center';
+      row.style.gap = '48px';
+    });
+
+    page.querySelectorAll(
+      '.pausepad-user-enactment-section .method-visual-wj, '+
+      '.pausepad-user-enactment-section .pausepad-user-enactment-photo'
+    ).forEach(box => {
+      box.style.position = 'static';
+      box.style.width = '100%';
+      box.style.maxWidth = '100%';
+      box.style.height = 'auto';
+      box.style.minHeight = '0';
+      box.style.maxHeight = 'none';
+      box.style.margin = '0';
+      box.style.padding = '0';
+      box.style.background = 'transparent';
+      box.style.border = '0';
+      box.style.borderRadius = '22px';
+      box.style.overflow = 'hidden';
+      box.style.display = 'flex';
+      box.style.alignItems = 'center';
+      box.style.justifyContent = 'center';
+      box.style.alignSelf = 'center';
+    });
+
+    page.querySelectorAll('.pausepad-user-enactment-section .method-visual-wj span').forEach(s => {
+      s.style.display = 'none';
+    });
+
+    page.querySelectorAll(
+      '.pausepad-user-enactment-section .method-visual-wj img, '+
+      '.pausepad-user-enactment-section .pausepad-user-enactment-photo img'
+    ).forEach(img => {
+      img.style.position = 'static';
+      img.style.display = 'block';
+      img.style.width = '100%';
+      img.style.maxWidth = '100%';
+      img.style.height = 'auto';
+      img.style.maxHeight = 'none';
+      img.style.objectFit = 'contain';
+      img.style.objectPosition = 'center center';
+      img.style.borderRadius = '22px';
+      img.style.margin = '0 auto';
+      img.style.padding = '0';
+      img.style.background = 'transparent';
+      img.style.transform = 'none';
+    });
+  }
+
+  function run(){
+    applyRound4();
+    setTimeout(applyRound4, 80);
+    setTimeout(applyRound4, 240);
+    setTimeout(applyRound4, 600);
+    setTimeout(applyRound4, 1200);
+  }
+  document.addEventListener('DOMContentLoaded', run);
+  document.addEventListener('click', function(e){
+    if(e.target.closest('[data-case], [data-page], .lang-toggle button')){
+      run();
+    }
+  }, true);
+  const prev = window.normalizeCaseStudyLayout;
+  window.normalizeCaseStudyLayout = function(caseId){
+    if(typeof prev === 'function') prev(caseId);
+    run();
+  };
+
+  // Also re-apply when the PausePad UE section is dynamically inserted.
+  const obs = new MutationObserver((muts) => {
+    for(const m of muts){
+      for(const n of m.addedNodes){
+        if(n.nodeType === 1 && (
+          n.classList && n.classList.contains('pausepad-user-enactment-section') ||
+          n.querySelector && n.querySelector('.pausepad-user-enactment-section')
+        )){
+          run();
+          return;
+        }
+      }
+    }
+  });
+  document.addEventListener('DOMContentLoaded', () => {
+    const target = document.getElementById('page-case') || document.body;
+    if(target) obs.observe(target, {childList:true, subtree:true});
+  });
 })();
 </script>
 
