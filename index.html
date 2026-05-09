@@ -1888,6 +1888,76 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
   .pausepad-video-feature{grid-template-columns:1fr;}
 }
 
+
+/* ============== RESUME DROPDOWN ============== */
+.resume-dropdown{
+  position:relative;
+  display:inline-flex;
+  align-items:center;
+}
+.resume-dropdown > .btn{
+  white-space:nowrap;
+}
+.resume-menu{
+  position:absolute;
+  top:calc(100% + 10px);
+  left:0;
+  min-width:190px;
+  background:var(--paper);
+  border:1.5px solid var(--ink);
+  border-radius:16px;
+  padding:8px;
+  box-shadow:5px 5px 0 -1px var(--pink), 5px 5px 0 0 var(--ink);
+  opacity:0;
+  transform:translateY(-6px);
+  pointer-events:none;
+  transition:opacity .2s ease, transform .2s ease;
+  z-index:50;
+}
+.resume-dropdown:hover .resume-menu,
+.resume-dropdown:focus-within .resume-menu{
+  opacity:1;
+  transform:translateY(0);
+  pointer-events:auto;
+}
+.resume-menu a{
+  display:block;
+  padding:10px 12px;
+  border-radius:10px;
+  font-size:14px;
+  color:var(--ink-soft);
+  transition:background .18s ease, color .18s ease;
+}
+.resume-menu a:hover{
+  background:var(--pink-soft);
+  color:var(--ink);
+}
+.resume-dropdown-primary .resume-menu{
+  left:50%;
+  transform:translate(-50%, -6px);
+}
+.resume-dropdown-primary:hover .resume-menu,
+.resume-dropdown-primary:focus-within .resume-menu{
+  transform:translate(-50%, 0);
+}
+@media (max-width:560px){
+  .resume-dropdown,
+  .resume-dropdown > .btn{
+    width:100%;
+  }
+  .resume-dropdown > .btn{
+    justify-content:center;
+  }
+  .resume-menu{
+    left:50%;
+    transform:translate(-50%, -6px);
+  }
+  .resume-dropdown:hover .resume-menu,
+  .resume-dropdown:focus-within .resume-menu{
+    transform:translate(-50%, 0);
+  }
+}
+
 /* ============== UTILITY ============== */
 .lang-en .show-zh{display:none !important}
 .lang-zh .show-en{display:none !important}
@@ -3462,14 +3532,23 @@ Case study images:
               <span class="show-zh">查看作品</span>
               <span class="btn-arrow">→</span>
             </a>
-            <a href="#" class="btn">
-              <span class="show-en">Download resume</span>
-              <span class="show-zh">下载简历</span>
-            </a>
-            <a href="#" class="btn">
-              <span class="show-en">Contact me</span>
-              <span class="show-zh">联系我</span>
-            </a>
+            <div class="resume-dropdown">
+              <button class="btn" type="button" aria-haspopup="true">
+                <span class="show-en">Download resume</span>
+                <span class="show-zh">下载简历</span>
+                <span class="btn-arrow">⌄</span>
+              </button>
+              <div class="resume-menu" role="menu">
+                <a href="assets/resume-en.pdf" download role="menuitem">
+                  <span class="show-en">English resume</span>
+                  <span class="show-zh">英文简历</span>
+                </a>
+                <a href="assets/resume-zh.pdf" download role="menuitem">
+                  <span class="show-en">Chinese resume</span>
+                  <span class="show-zh">中文简历</span>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
         <div class="hero-portrait">
@@ -3687,19 +3766,27 @@ Case study images:
       <span class="show-zh">想了解更多？</span>
     </h2>
     <p>
-      <span class="show-en">Download my resume or get in touch.</span>
-      <span class="show-zh">欢迎查看我的简历，或直接联系我。</span>
+      <span class="show-en">Download my resume.</span>
+      <span class="show-zh">欢迎查看我的简历。</span>
     </p>
     <div class="hero-buttons">
-      <a href="#" class="btn btn-primary">
-        <span class="show-en">Download Resume</span>
-        <span class="show-zh">下载简历</span>
-        <span class="btn-arrow">→</span>
-      </a>
-      <a href="#" class="btn">
-        <span class="show-en">Contact Me</span>
-        <span class="show-zh">联系我</span>
-      </a>
+      <div class="resume-dropdown resume-dropdown-primary">
+        <button class="btn btn-primary" type="button" aria-haspopup="true">
+          <span class="show-en">Download Resume</span>
+          <span class="show-zh">下载简历</span>
+          <span class="btn-arrow">⌄</span>
+        </button>
+        <div class="resume-menu" role="menu">
+          <a href="assets/resume-en.pdf" download role="menuitem">
+            <span class="show-en">English resume</span>
+            <span class="show-zh">英文简历</span>
+          </a>
+          <a href="assets/resume-zh.pdf" download role="menuitem">
+            <span class="show-en">Chinese resume</span>
+            <span class="show-zh">中文简历</span>
+          </a>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -3885,7 +3972,7 @@ Case study images:
   <section class="facts-card fun-facts-new"><h3>✿ <span class="show-en">some fun facts ᕕ( ᐛ )ᕗ</span><span class="show-zh">一些关于我的小事 ᕕ( ᐛ )ᕗ</span></h3><ul class="facts-list"><li><span class="show-en">I originally planned to study statistics, but it felt too dry for me. During undergrad, I switched toward UI/UX and found something I genuinely care about: using my effort to make other people’s experiences feel better.</span><span class="show-zh">我之前本来打算学统计，但后来觉得太无趣了。本科时我转到 UI/UX 方向，反而发现自己真的很有兴趣也很有热情，因为我喜欢能帮到别人的感觉，也喜欢通过自己的努力让别人的体验变好。</span></li><li><span class="show-en">I have photographed 50+ different people and run my own portrait account. I started with a Fujifilm X-T30 II and now use a Fujifilm X-S20.</span><span class="show-zh">我拍过 50+ 个不同的人，也有自己的约拍账号。之前用富士 X-T30 II，现在换成了富士 X-S20。</span></li><li><span class="show-en">Besides music and photography, I love traveling, especially solo travel. I have visited 10 countries and 22 provinces or municipalities in China.</span><span class="show-zh">除了音乐和摄影之外，我最喜欢旅行，尤其喜欢独自旅行。我已经去过 10 个国家，也去过中国内 22 个省或直辖市。</span></li><li><span class="show-en">When I travel alone, I usually stay in hostels. If I meet people I click with, we explore together. If not, I am very happy walking around, sightseeing, and eating good food by myself.</span><span class="show-zh">我自己出去玩通常住青旅。如果在青旅里遇到合得来的朋友，就一起玩；如果没有缘分，我也很享受自己逛景点、吃好吃的。</span></li><li><span class="show-en">I like games, especially card and strategy games. In Hearthstone Battlegrounds, I usually stay around 6000 to 7000 rating; in Teamfight Tactics and Golden Spatula, I am usually between Diamond and Master.</span><span class="show-zh">我喜欢玩游戏，尤其喜欢棋牌和策略类。炉石传说战棋一般在 6000 到 7000 分徘徊；云顶之弈和金铲铲一般在钻石到大师之间徘徊。</span></li><li><span class="show-en">My favorite drinks are fruit tea and smoothies. Peach, grape, and passion fruit are always my top choices.</span><span class="show-zh">我最喜欢喝水果茶和冰沙，最爱桃子味、葡萄味和百香果味。</span></li></ul></section>
   <section class="identity-row zodiac-expanded"><div class="identity-card"><span class="identity-deco">✿</span><span class="identity-label"><span class="show-en">personality</span><span class="show-zh">人格类型</span></span><span class="identity-value"><span class="show-en">ISFP · observant empath</span><span class="show-zh">ISFP · 细腻的共情者</span></span><span class="identity-desc"><span class="show-en">Quietly observant, sensitive to tone, and often drawn to work that feels human rather than purely technical.</span><span class="show-zh">安静地观察，对语气和感受很敏锐，也更容易被有人味的工作吸引，而不只是技术本身。</span></span></div><div class="identity-card right"><span class="identity-deco">✦</span><span class="identity-label"><span class="show-en">zodiac strengths</span><span class="show-zh">星盘里的优势</span></span><span class="identity-value"><span class="show-en">Capricorn Sun · Cancer Moon · Libra Rising</span><span class="show-zh">太阳摩羯 · 月亮巨蟹 · 上升天秤</span></span><span class="identity-desc"><span class="show-en">This combination points to practical ambition, emotional depth, strong observation, compassion, adaptability, charm, and a natural sense of balance. In design, I read this as: build carefully, notice what others miss, and make things feel considerate without losing structure.</span><span class="show-zh">这个组合对应的优点包括务实的行动力、情感深度、敏锐观察、同理心、适应力、亲和感，以及对平衡的天然追求。放到设计里，我会理解成：认真搭结构，注意别人容易忽略的细节，并让体验既有秩序，也有照顾人的感觉。</span></span></div></section>
   <section class="edu-section"><h3><span class="show-en">education</span><span class="show-zh">教育背景</span></h3><ul class="edu-list"><li class="edu-item"><span class="edu-time">2025 — 2027</span><span class="edu-school"><span class="show-en">University of Michigan, Ann Arbor</span><span class="show-zh">密歇根大学安娜堡分校</span></span><span class="edu-degree"><span class="show-en">Master of Science in Information · UX Track</span><span class="show-zh">信息学硕士 · 用户体验方向</span></span></li><li class="edu-item"><span class="edu-time">2021 — 2025</span><span class="edu-school"><span class="show-en">University of Illinois Urbana-Champaign</span><span class="show-zh">伊利诺伊大学厄巴纳-香槟分校</span></span><span class="edu-degree"><span class="show-en">B.S. in Information Sciences · UI/UX Pathway</span><span class="show-zh">信息科学学士 · UI/UX 方向</span></span></li></ul></section>
-  <section class="cta-card"><h2><span class="show-en">let's create something thoughtful together ✨</span><span class="show-zh">期待和你一起创造有温度的体验 ✨</span></h2><div class="hero-buttons"><a href="mailto:hello@skylarsong.me" class="btn btn-primary"><span class="show-en">Email Me</span><span class="show-zh">给我发邮件</span><span class="btn-arrow">→</span></a><a href="#" class="btn" data-page="work"><span class="show-en">View Work</span><span class="show-zh">查看作品</span></a></div></section>
+  <section class="cta-card"><h2><span class="show-en">let's create something thoughtful together ✨</span><span class="show-zh">期待和你一起创造有温度的体验 ✨</span></h2><div class="hero-buttons"><a href="#" class="btn btn-primary" data-page="work"><span class="show-en">View Work</span><span class="show-zh">查看作品</span><span class="btn-arrow">→</span></a></div></section>
 </main>
 
 
@@ -3902,7 +3989,6 @@ Case study images:
         <span class="show-zh">欢迎联系我 ✨</span>
       </h3>
       <div class="footer-links">
-        <a href="mailto:hello@skylarsong.me" class="footer-link">✉ <span class="show-en">Email</span><span class="show-zh">邮箱</span></a>
         <a href="#" class="footer-link">in LinkedIn</a>
         <a href="#" class="footer-link">⌘ GitHub</a>
         <a href="#" class="footer-link">✦ Behance</a>
@@ -3949,7 +4035,7 @@ Case study images:
   }
   tick();
 
-  const interactiveSelector = 'a, button, .work-card, .music-card, .pill, .nav-link, .btn, .footer-link, [data-page], [data-case], [data-scroll], .lang-toggle button, .note';
+  const interactiveSelector = 'a, button, .work-card, .music-card, .pill, .nav-link, .btn, .footer-link, .resume-menu a, [data-page], [data-case], [data-scroll], .lang-toggle button, .note';
 
   document.addEventListener('mouseover', e => {
     if(e.target.closest(interactiveSelector)){
