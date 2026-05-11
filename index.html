@@ -2833,7 +2833,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 
 
 
-/* ============== PLAYGROUND YOUTUBE VIDEO EMBEDS ============== */
+/* ============== PLAYGROUND BILIBILI VIDEO LINKS ============== */
 .video-grid{align-items:start;}
 .video-card{display:block;}
 .video-thumb{aspect-ratio:16 / 9;height:auto !important;background:var(--paper);}
@@ -2955,6 +2955,26 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
   transition:transform .25s ease;
 }
 .video-link-thumb:hover .play-btn{transform:scale(1.08)}
+
+.bilibili-thumb-label{
+  position:absolute;
+  inset:0;
+  z-index:1;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family:var(--font-display);
+  font-size:22px;
+  letter-spacing:.02em;
+  color:var(--ink-soft);
+  background:linear-gradient(135deg, var(--pink-soft), var(--lilac-soft));
+}
+.music-card:nth-child(2) .bilibili-thumb-label{background:linear-gradient(135deg, var(--lilac-soft), var(--sky));}
+.music-card:nth-child(3) .bilibili-thumb-label{background:linear-gradient(135deg, var(--mint), var(--butter-soft));}
+.music-card:nth-child(4) .bilibili-thumb-label{background:linear-gradient(135deg, var(--sky), var(--lilac-soft));}
+.music-card:nth-child(5) .bilibili-thumb-label{background:linear-gradient(135deg, var(--butter-soft), var(--pink-soft));}
+.music-card:nth-child(6) .bilibili-thumb-label{background:linear-gradient(135deg, var(--peach), var(--pink-soft));}
+
 
 
 /* ============== PLAYGROUND PHOTO WALL PERFORMANCE + LIGHTBOX ============== */
@@ -3890,8 +3910,8 @@ Case study images:
     </h2>
     <div class="music-grid video-grid">
       <article class="music-card video-card">
-        <a class="music-thumb video-thumb video-link-thumb" href="https://youtu.be/oRLkrffqaxI" target="_blank" rel="noopener noreferrer" aria-label="Watch Give You a Bottle of Magic Potion band chorus on YouTube">
-          <img src="https://img.youtube.com/vi/oRLkrffqaxI/hqdefault.jpg" alt="Give You a Bottle of Magic Potion band chorus thumbnail">
+        <a class="music-thumb video-thumb video-link-thumb" href="https://www.bilibili.com/video/BV1kxRmBGEPv/?share_source=copy_web&vd_source=b5fbbbda6e56e6f1fef1e0d6ef908fb4" target="_blank" rel="noopener noreferrer" aria-label="Watch Give You a Bottle of Magic Potion band chorus on Bilibili">
+          <span class="bilibili-thumb-label">Bilibili</span>
           <span class="play-btn">▶</span>
         </a>
         <div class="music-meta video-info">
@@ -3902,8 +3922,8 @@ Case study images:
       </article>
 
       <article class="music-card video-card">
-        <a class="music-thumb video-thumb video-link-thumb" href="https://youtu.be/0sUDRxFBKA8" target="_blank" rel="noopener noreferrer" aria-label="Watch Full Name solo cover on YouTube">
-          <img src="https://img.youtube.com/vi/0sUDRxFBKA8/hqdefault.jpg" alt="Full Name solo cover thumbnail">
+        <a class="music-thumb video-thumb video-link-thumb" href="https://www.bilibili.com/video/BV168RmBzEyH/?share_source=copy_web&vd_source=b5fbbbda6e56e6f1fef1e0d6ef908fb4" target="_blank" rel="noopener noreferrer" aria-label="Watch Full Name solo cover on Bilibili">
+          <span class="bilibili-thumb-label">Bilibili</span>
           <span class="play-btn">▶</span>
         </a>
         <div class="music-meta video-info">
@@ -3914,8 +3934,8 @@ Case study images:
       </article>
 
       <article class="music-card video-card">
-        <a class="music-thumb video-thumb video-link-thumb" href="https://youtu.be/EfVV8lFOpAM" target="_blank" rel="noopener noreferrer" aria-label="Watch River band cover on YouTube">
-          <img src="https://img.youtube.com/vi/EfVV8lFOpAM/hqdefault.jpg" alt="River band cover thumbnail">
+        <a class="music-thumb video-thumb video-link-thumb" href="https://www.bilibili.com/video/BV1SgRmBpE6P/?share_source=copy_web&vd_source=b5fbbbda6e56e6f1fef1e0d6ef908fb4" target="_blank" rel="noopener noreferrer" aria-label="Watch River band cover on Bilibili">
+          <span class="bilibili-thumb-label">Bilibili</span>
           <span class="play-btn">▶</span>
         </a>
         <div class="music-meta video-info">
@@ -3926,8 +3946,8 @@ Case study images:
       </article>
 
       <article class="music-card video-card">
-        <a class="music-thumb video-thumb video-link-thumb" href="https://youtu.be/isj0jwpojlc" target="_blank" rel="noopener noreferrer" aria-label="Watch Sun and Earth guitar cover on YouTube">
-          <img src="https://img.youtube.com/vi/isj0jwpojlc/hqdefault.jpg" alt="Sun and Earth guitar cover thumbnail">
+        <a class="music-thumb video-thumb video-link-thumb" href="https://www.bilibili.com/video/BV1ggRmBWE39/?share_source=copy_web&vd_source=b5fbbbda6e56e6f1fef1e0d6ef908fb4" target="_blank" rel="noopener noreferrer" aria-label="Watch Sun and Earth guitar cover on Bilibili">
+          <span class="bilibili-thumb-label">Bilibili</span>
           <span class="play-btn">▶</span>
         </a>
         <div class="music-meta video-info">
@@ -3938,8 +3958,8 @@ Case study images:
       </article>
 
       <article class="music-card video-card">
-        <a class="music-thumb video-thumb video-link-thumb" href="https://youtu.be/W-ZemIMqlYg" target="_blank" rel="noopener noreferrer" aria-label="Watch Light Years Away duet cover on YouTube">
-          <img src="https://img.youtube.com/vi/W-ZemIMqlYg/hqdefault.jpg" alt="Light Years Away duet cover thumbnail">
+        <a class="music-thumb video-thumb video-link-thumb" href="https://www.bilibili.com/video/BV1rbRmBgEV7/?share_source=copy_web&vd_source=b5fbbbda6e56e6f1fef1e0d6ef908fb4" target="_blank" rel="noopener noreferrer" aria-label="Watch Light Years Away duet cover on Bilibili">
+          <span class="bilibili-thumb-label">Bilibili</span>
           <span class="play-btn">▶</span>
         </a>
         <div class="music-meta video-info">
@@ -3950,8 +3970,8 @@ Case study images:
       </article>
 
       <article class="music-card video-card">
-        <a class="music-thumb video-thumb video-link-thumb" href="https://youtu.be/79jLm1uPBz0" target="_blank" rel="noopener noreferrer" aria-label="Watch Compromise solo cover on YouTube">
-          <img src="https://img.youtube.com/vi/79jLm1uPBz0/hqdefault.jpg" alt="Compromise solo cover thumbnail">
+        <a class="music-thumb video-thumb video-link-thumb" href="https://www.bilibili.com/video/BV1ggRmBWE38/?share_source=copy_web&vd_source=b5fbbbda6e56e6f1fef1e0d6ef908fb4" target="_blank" rel="noopener noreferrer" aria-label="Watch Compromise solo cover on Bilibili">
+          <span class="bilibili-thumb-label">Bilibili</span>
           <span class="play-btn">▶</span>
         </a>
         <div class="music-meta video-info">
